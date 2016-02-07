@@ -80,6 +80,28 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
     })
 
+    .state('app.mediumdetail', {
+url: '/mediumdetail',
+views: {
+'menuContent': {
+templateUrl: 'templates/mediumdetail.html',
+controller: 'HighCtrl'
+}
+
+}
+})
+
+    .state('app.medium', {
+url: '/medium',
+views: {
+'menuContent': {
+templateUrl: 'templates/medium.html',
+controller: 'MediumCtrl'
+}
+
+}
+})
+
  .state('app.notify', {
         url: '/notify',
         views: {

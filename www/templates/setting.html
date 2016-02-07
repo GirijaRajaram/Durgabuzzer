@@ -1,32 +1,26 @@
 
-<!--<ion-view view-title="Settings">
+<ion-view view-title="Settings">
 <ion-nav-buttons side="left">
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
                 </button>
-            </ion-nav-buttons>
-
-<button id="fab" class="button button-balanced button-fab button-fab-bottom-right">
-            <i class="icon ion-ios-telephone"></i>
-        </button>
-    <ion-content ng-class="{expanded:$scope.isExpanded}">
+ </ion-nav-buttons>
 
 
-   <label class="toggle">
-   <input type="checkbox">
-   <div class="track">
-     <div class="handle"></div>
-   </div>
-</label>
-    </ion-content>
-</ion-view>-->
-<ion-view view-title="Settings">
-    <ion-content class="has-header">
-        <ion-list>
-            <ion-item ui-sref="app.notify"><i class="icon ion-wifi"></i>&nbsp;&nbsp;&nbsp;&nbsp;Enable Notification
-            </ion-item>
-            <ion-item ui-sref="app.faq"><i class="fa ion-help"></i>&nbsp;&nbsp;&nbsp;&nbsp;FAQ</ion-item>
+    <ion-content ng-class="{expanded:$scope.isExpanded}"><br>
+    <ion-list>
+           <!-- <ion-item ui-sref="app.notify"><font size="5" color="darkblue"><i class="icon ion-wifi"></i></font>&nbsp;&nbsp;&nbsp;&nbsp;<font size="4" ><b>Enable Notification</b></font>
+            </ion-item>-->
+
+            <a class="item item-icon-left" ui-sref="app.notify">
+   <font size="5" color="brown"> <i class="icon ion-android-notifications"></i></font>
+   &nbsp;&nbsp;&nbsp;&nbsp;<font size="4" ><b>Enable Notification</b></font>
+    
+  </a>
+
+            <ion-item ui-sref="app.faq"><font size="5" color="darkblue">&nbsp;<i class="icon ion-help"></i></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4" ><b>FAQ</b></font></ion-item>
          <!--   <ion-item ui-sref="app.terms"><i class="fa fa-th-list "></i>&nbsp;&nbsp;&nbsp;Terms of Use</ion-item>-->
-            <ion-item ui-sref="app.privacy"><i class="icon ion-android-person"></i>&nbsp;&nbsp;&nbsp;&nbsp;Profile</ion-item>
+            <ion-item ui-sref="app.privacy"><font size="5" color="blue"><i class="icon ion-android-person"></i></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4" ><b>Profile</b></font></ion-item>
         </ion-list>
     </ion-content>
 </ion-view>
+

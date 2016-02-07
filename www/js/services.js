@@ -77,6 +77,24 @@ angular.module('starter.services', [])
     { title: 'Coffee Day', id: 5, img: 'cafe-coffee.jpg' },
     { title: 'Redbus', id: 6, img: 'redbus.jpg' }
   ];
+
+  var highdata = [
+{ id: 0, time:'24x7', vehile: 'cab', type:'bus', room: 'PG- single sharing'},
+{ id: 1, time:'full hours',vehile: 'cab', type:'train-3tier', room: 'PG 2BHK'},
+{ id: 2, time:'24x7',vehile: 'auto', type:'bus-sleeper', room: 'PG 2sharing'},
+{ id: 3, time:'24x7',vehile: 'cab', type:'train-AC', room: 'PG 2BHK'},
+{ id: 4, time:'full hours',vehile: 'auto', type:'train- 2tier', room: 'PG 2BHK'},
+{ id: 5, time:'24x7',vehile: 'cab', type:'bus', room: 'PG 2BHK'}
+];
+
+var mediumdata = [
+{ id: 0, time:'24x7', vehile: 'cab mini', type:'bus sleeper', room: 'PG- five sharing'},
+{ id: 1, time:'full hours',vehile: 'cab ox', type:'train second class', room: ' womens hostal'},
+{ id: 2, time:'24x7',vehile: 'auto', type:'bus-sleeper', room: 'PG 3sharing'},
+{ id: 3, time:'24x7',vehile: 'cab mini', type:'train-AC', room: 'PG 4BHK'},
+{ id: 4, time:'full hours',vehile: 'auto', type:'train- general', room: 'PG 2BHK'},
+{ id: 5, time:'24x7',vehile: 'cab', type:'bus-semisleeper', room: 'PG 2BHK'}
+];
   // Private Functions
     function getUsersDB() {
         console.log("connecting to DB:Get");
@@ -129,6 +147,13 @@ function getbook() {
       }
       return null;
     }, 
+    getMediumData: function() {
+return mediumdata;
+}, 
+getHighData: function() {
+return highdata;
+},
+
     createUsers: function(user) {
       var users = getUsersDB();
       users.push(user);
@@ -210,12 +235,12 @@ function getbook() {
       text: 'When you enter into the red location Durga buzzer automatically will send pre alert message to My Durga Group. In this red area you can chat with your My Durga group. This will make feel like you were protected by some one. This screen also have voice detection to recoganize the hotword "Help me Durga".'
     },
     {
-      title: 'What all can I do on Virthe?',
-      text: 'The free app offers streaming(play videos online) and downloading of latest movies. You can create your favorites list and share it with your friends. Users can also watch these videos on their TV sets by using the Chromecast feature.'
+      title: 'How do i book the cab in durgabuzzer?',
+      text: 'You can easily book a ticket using our Mobile Application by simply selecting the different packages we offers for you.'
     },
     {
-      title: 'My question is not here.',
-      text: 'You can write to us with any query or feedback and we will get back to you. Go to Sidemenu >> Feedback >> choose Feedback for give your feedbacks or choose Queries to ask your doubts'
+      title: 'How Durgabuzzer is safe?',
+      text: 'we have been working steadily on building a great product for customers and more women cab drivers. We have security experts and continue to work with the best of security experts in the industry to make Durga safe and secure for our customers.'
   }];
   return {
     getAll : function(){

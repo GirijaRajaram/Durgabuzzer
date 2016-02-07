@@ -1,31 +1,29 @@
 <ion-view view-title="Profile">
-<ion-nav-buttons side="left">
-                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-                </button>
-            </ion-nav-buttons>
+<ion-nav-back-button class="no-text">
+  </ion-nav-back-button>
 
     <ion-content  class="has-header padding">
    <div class="card">
       <div class="list">
         <label class="item item-input">
-          <span class="input-label" style="color:#D50000;">Name</span>
+          <span class="input-label" style="color:#D50000;"><b>Name:</b></span>
           <input type="text" ng-model="data1.name" >
         </label>
           <label class="item item-input">
-          <span class="input-label" style="color:#D50000;">Mobile Number</span>
+          <span class="input-label" style="color:#D50000;"><b>Mobile Number:</b></span>
           <input type="tel" ng-model="data1.phone">
         </label>  <label class="item item-input">
-          <span class="input-label" style="color:#D50000;">Age</span>
+          <span class="input-label" style="color:#D50000;"><b>Age:</b></span>
           <input type="number" ng-model="data1.age" >
         </label>
         <label class="item item-input">
-          <span class="input-label" style="color:#D50000;">Email</span>
+          <span class="input-label" style="color:#D50000;"><b>Email:</b></span>
           <input type="email" ng-model="data1.email" >
         </label>
-        
-        
-          <button ng-click="doUpdate()" class="button button-block button-balanced" ng-disabled="(!data1.name || !data1.phone || !data1.age || !data1.email )">Update</button>
-       
+        <br>
+        <center>
+          <button ng-click="doUpdate()" class="button button-small button-assertive" ng-disabled="(!data1.name || !data1.phone || !data1.age || !data1.email )">Update</button>
+       </center><br>
         
       </div>
     </div>

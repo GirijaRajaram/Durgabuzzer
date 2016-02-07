@@ -3,15 +3,13 @@
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
                 </button>
             </ion-nav-buttons>
-<button id="fab" class="button button-balanced button-fab button-fab-bottom-right">
-            <i class="icon ion-ios-telephone"></i>
-        </button>
+
     <ion-content >
    
         <div class="hero slide-up" style="background-image: url('img/green.jpg');">
             <div class="content">
                 <div class="avatar" style="background-image: url('img/durga1.jpg');"></div>
-                <h3><a class="light">Ratha</a></h3>
+                <h3>{{loggedUser.name}}</h3>
                 <h4>I am a Durga</h4>
             </div>
         </div>
@@ -31,7 +29,7 @@
         <img src="img/Microphone-icon.jpg" height="50" width="50">
         <img src="img/speaker.jpg" height="50" width="50">
     </center>
-    <h3 class="content padding double-padding-x" style="color:brown">Tips</h3>
+    <h3 class="content padding double-padding-x" style="color:brown"><center><b>Tips</b></center></h3>
         <a ui-sref="app.aware" class="item item-body item-avatar item-icon-right">
                     <img src="img/aware.jpg">
                     <h2> Awareness  </h2>

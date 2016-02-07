@@ -1,0 +1,28 @@
+<ion-view view-title=" Packages" >
+<ion-content class="padding">
+
+<ion-nav-back-button class="no-text">
+</ion-nav-back-button>
+
+<div class="item card-item" ng-repeat="data in highData" >
+<div class="card stable-bg ink ink-dark">
+<div class="item item-text-wrap">
+
+<h2><strong> {{data.type}}
+
+</strong></h2>
+<p>{{data.time}}</p>
+<p>{{data.vehicle}}</p>
+<p>{{data.room}}</p>
+<div class="card-footer text-right">
+<a ng-click="doneBooking()"> <i class="icon ion-android-done-all assertive "></i><font size="4"> Book</font></a>
+<!-- <i class="icon ion-heart assertive"></i> -->
+<!-- <div class="pull-left">-->
+<!--<i class="icon ion-clock assertive"></i> {{case.created_at | date}}
+</div>-->
+</div>
+</div>
+</div>
+</div>
+</ion-content>
+</ion-view>

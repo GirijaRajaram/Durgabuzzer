@@ -1,30 +1,30 @@
 <ion-view view-title="Login" hide-nav-bar="true" >
 
    
-   <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
+   <ion-content style="background: url(img/dur.jpg) center; background-size: cover;">
         <div class="hero no-header flat">
             <div class="content">
                 <div class="app-icon"></div>
-                <h1>Durga Buzzer</h1>
+                <h1><font color="black">Durga Buzzer</font></h1>
             </div>
         </div>
          
    <div class="list">
         <label class="item item-input">
-          <span class="input-label" style="color:#FFFFFF;">Username</span>
-          <input style="color:#FFFFFF;" type="email" ng-model="loginData.username">
+          <span class="input-label" style="color:#0000;">Username:</span>
+          <input style="color:#0000;" type="email" ng-model="loginData.username">
         </label>
         <label class="item item-input">
-          <span class="input-label" style="color:#FFFFFF;">Password</span>
+          <span class="input-label" style="color:#0000;">Password:</span>
           <input type="password" ng-model="loginData.password" >
         </label>
         </div>
         <div class="padding">
-            <button ng-click="doLogin()" class="button button-full button-positive ink">Login</button>
+            <button ng-click="doLogin()" class="button button-full button-assertive ink">Login</button>
         </div>
         <div class="padding" style="text-align: center; ">
-        <p style="color:#FFFFFF;">Don't have an account <a href='#/signup'>Signup</a> Here</p>
-        <p style="color:#FFFFFF;">Forgot Password?  <a href='#/forgot'>reset</a> Here</p>
+        <p><h5><font color="black">Don't have an account <a href='#/signup'>Signup</a> Here</font></h5></p>
+        <p><h5><font color="black">Forgot Password?  <a href='#/forgot'>reset</a> Here</font></h5></p>
         </div>  
              
         <div class="button-bar social-login">

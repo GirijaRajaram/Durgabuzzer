@@ -207,65 +207,7 @@ $scope.data1 = JSON.parse(localStorage.loggedUser);
 
 })
 
-.controller('BookingCtrl', function($scope, $ionicSideMenuDelegate, $ionicPopup, $ionicLoading, $timeout, $stateParams, SocialAuthService, DataService) {
-    console.log("BookingCtrl: ENTERED");
-    /* Memeber varialbe */
-    $scope.bookingData = {};
-    // Set Header
-    $scope.$parent.showHeader();
-    $scope.$parent.clearFabs();
-    $scope.isExpanded = false;
-    $scope.$parent.setExpanded(false);
-    $scope.$parent.setHeaderFab(false);
 
-    // Set Motion
-    $timeout(function() {
-        ionic.material.motion.slideUp({
-            selector: '.slide-up'
-        });
-    }, 300);
-
-    $timeout(function() {
-        ionic.material.motion.fadeSlideInRight({
-            startVelocity: 3000
-        });
-    }, 700);
-
-    // Set Ink
-    ionic.material.ink.displayEffect();
-
-    $ionicSideMenuDelegate.canDragContent(false);
-console.log("Booking Details ", $scope.bookData);
-
-$scope.bookData= {};
-    $scope.doBooking = function() {
-
-        var ret=true;
-        console.log("BookingCtrl:(doBooking): ENTERED");
-        $ionicLoading.show();       
-        
-           ret = DataService.createbook($scope.bookData); 
-        if (ret) {
-             $ionicLoading.hide();
-              var alertPopup = $ionicPopup.alert({
-                title: "Book Successfull",
-                template: "Trip detail forword with you"
-                });
-              $state.go('app.trip');
-        } else {
-              $ionicLoading.hide();
-              var alertPopup = $ionicPopup.alert({
-                title: "Booked Failed",
-                template: "Please try again"
-                });            
-        }           
-
-        console.log("BookingCtrl ", $scope.bookingData);
-        console.log("BookingCtrl:(doBooking): EXITED");           
-    }
-    console.log("BookingCtrl: EXITED");
-
-})
 .controller('faqCtrl', function($scope, $state, faqService){
     $scope.items = faqService.getAll();
     $scope.toggleGroup = function(group) {
@@ -280,6 +222,64 @@ $scope.bookData= {};
   };
 
     
+})
+
+.controller('MediumCtrl', function($scope, DataService, $ionicPopup, $state) {
+
+$scope.travelData = DataService.getMediumData();
+
+$scope.doneBooking = function(){
+var alertPopup = $ionicPopup.alert({
+title: "Package ",
+template: "Booking Successfull"
+});
+$state.go('app.medium');
+};
+})
+
+.controller('BookingCtrl', function($scope, $state, $ionicPopup, $ionicLoading, $timeout, $stateParams, SocialAuthService, DataService) {
+console.log("BookingCtrl: ENTERED");
+/* Memeber varialbe */
+$scope.bookData = {};
+// Set Header
+console.log("Booking Details ", $scope.bookData);
+$scope.doBooking = function() {
+var budget = $scope.bookData.select;
+//var ret;
+console.log("BookingCtrl:(doBooking): ENTERED");
+$ionicLoading.show(); 
+console.log("BookingCtrl: ", $scope.bookData);
+DataService.createbook($scope.bookData); 
+
+$ionicLoading.hide();
+var alertPopup = $ionicPopup.alert({
+title: "TravelData",
+template: "Book Successfull"
+});
+if(budget === "Medium" ){
+$state.go('app.medium');
+}
+else
+{
+$state.go('app.mediumdetail'); 
+}
+}; 
+
+// console.log("BookingCtrl ", $scope.bookingData);
+console.log("BookingCtrl:(doBooking): EXITED"); 
+})
+
+.controller('HighCtrl', function($scope, DataService, $ionicPopup, $state) {
+
+$scope.highData = DataService.getHighData();
+
+$scope.doneBooking = function(){
+var alertPopup = $ionicPopup.alert({
+title: "Package ",
+template: "Booking Successfull"
+});
+$state.go('app.medium');
+};
 })
 
 .controller('FriendsCtrl', function($scope, $stateParams, $timeout) {
