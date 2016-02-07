@@ -1,0 +1,50 @@
+<ion-view view-title="Help Others" align-title="center">
+<ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+<button id="fab" class="button button-balanced button-fab button-fab-bottom-right">
+            <i class="icon ion-ios-telephone"></i>
+        </button>
+<ion-content>
+           
+      
+      <div class="list">
+         <form action="https://docs.google.com/forms/d/10kS-W1f1rH99CgLIoo8A1wH_mATUAyOJk3gm_qh1T_M/formResponse" method="POST" id="ss-form" target="_self">
+        <label class="item item-input">
+          <span class="input-label" for="entry_2010578065">Name</span>
+          <input type="text" ng-model="user.name" name="entry.2010578065" id="entry_2010578065">
+        </label>
+        <label class="item item-input">
+          <span class="input-label" for="entry_448755978">Email-ID</span>
+          <input type="email" ng-model="user.mail" name="entry.448755978" id="entry_448755978">
+        </label> 
+          <label class="item item-input">
+          <span class="input-label" for="entry_507750956">Mobile Number</span>
+          <input type="number" ng-model="user.mno" name="entry.507750956" id="entry_507750956">
+        </label> 
+         <label class="item item-input">
+          <span class="input-label" for="entry_2037448149">Location</span>
+          <input type="text" ng-model="user.age" name="entry.2037448149" id="entry_2037448149">
+        </label>
+           <label class="item item-input item-select">
+        <div class="input-label" for="entry_785646988">
+          Condition
+        </div>
+        <select name="entry.785646988" id="entry_785646988">
+          <option>Good Location</option>
+          <option>Moderate Location</option>
+          <option>Danger Location</option>
+        </select>
+      </label>
+
+        
+          <button type="submit" class="button button-block button-balanced">Done</button>
+          
+          <button ui-sref="app.profile" class="button button-block button-stable">Cancel</button>
+    </form>    
+      </div>
+    
+        
+    </ion-content>
+</ion-view>

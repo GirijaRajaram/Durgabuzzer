@@ -1,0 +1,22 @@
+<ion-view view-title="Enable Notification">
+<ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+
+<button id="fab" class="button button-balanced button-fab button-fab-bottom-right">
+            <i class="icon ion-ios-telephone"></i>
+        </button>
+    <ion-content class="has-header">
+    <div class="card padding">
+    <h4 style="color:#E91E63;"> Select Timing To Send Notification</h4><br>
+
+     <div class="radio-container" >
+<ion-radio ng-model="choice" ng-value="'A'">Every 1 Hour</ion-radio>
+<ion-radio ng-model="choice" ng-value="'B'">Every 2 Hour</ion-radio>
+<ion-radio ng-model="choice" ng-value="'B'">Every 4 Hour</ion-radio>
+<ion-radio ng-model="choice" ng-value="'C'">Every 8 Hour</ion-radio>
+
+
+                </div>
+    </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,31 @@
+<ion-view view-title="FAQ">
+<ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+
+<button id="fab" class="button button-balanced button-fab button-fab-bottom-right">
+            <i class="icon ion-ios-telephone"></i>
+        </button>
+
+<!--<button id="fab" class="button button-balanced button-fab button-fab-bottom-right">
+            <i class="icon ion-ios-telephone"></i>
+        </button>-->
+    <ion-content class="has-header padding">
+        <ion-list>
+        <div class="card">
+        <div ng-repeat="group in items">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{group.title}}
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown(group)">
+            <div class="item-text-wrap">{{group.text}}</div>
+          </ion-item>
+        </div>
+      </div>
+      </ion-list>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,73 @@
+<script type="text/javascript">
+var recognition;
+document.addEventListener('deviceready', onDeviceReady, false);
+
+function onDeviceReady() {
+    recognition = new SpeechRecognition();
+    recognition.onresult = function(event) {
+        if (event.results.length > 0) {
+            q.value = event.results[0][0].transcript;
+            q.form.submit();
+        }
+    }
+}
+</script>
+<ion-view view-title="Dashboard" hide-back-button="true">
+<ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+<button id="fab" class="button button-balanced button-fab button-fab-bottom-right">
+            <i class="icon ion-ios-telephone"></i>
+        </button>
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+    
+        <div class="hero slide-up" style="background-image: url('img/red.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/durga.jpg');"></div>
+                <h3><a class="light">Ratha</a></h3>
+                <h4>I am a Durga</h4>
+            </div>
+        </div>
+           <div class="tabs tabs-dark tabs-icon-top static">
+            <a ui-sref="app.profile" class="tab-item">
+                <i class="icon ion-android-checkmark-circle"></i> Green
+            </a>
+            <a ui-sref="app.org" class="tab-item">
+                <i class="icon ion-android-done"></i> Orange
+            </a>
+            <a ui-sref="app.red" class="tab-item">
+                <i class="icon ion-android-close"></i> Red
+            </a>
+        </div>
+        <br>
+        <center>
+        <img src="img/Microphone-icon.jpg" height="50" width="50">
+        <img src="img/speaker.jpg" height="50" width="50">
+        </center>
+        <!--<center>
+        <button class="button button-positive" onclick="recognition.start()">Speech</button>
+        </center>-->
+        <h4 class="content padding double-padding-x">My Durgas</h4>
+        <div class="list animate-fade-slide-in-right">
+           <a ui-sref="#" class="item item-avatar item-icon-right">
+                <img src="img/arya.jpg">
+                <h2>Sharmila</h2>
+               
+                <i class="icon ion-chatbubble muted"></i>
+            </a>
+            <a ui-sref="#" class="item item-avatar item-icon-right">
+                <img src="img/sansa.jpg">
+                <h2>Vaishnavi</h2>
+               
+                <i class="icon ion-chatbubble muted"></i>
+            </a>
+            <a ui-sref="#" class="item item-avatar item-icon-right">
+                <img src="img/daenerys.jpg">
+                <h2>Girija</h2>
+               
+                <i class="icon ion-chatbubble muted"></i>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,69 @@
+<ion-view view-title="Trip Me" hide-back-button="true">
+<ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+<!--<button id="fab" class="button button-balanced button-fab button-fab-bottom-right">
+            <i class="icon ion-ios-telephone"></i>
+        </button>-->
+    <ion-content>     
+
+         <div class="item item-divider"><br><center>
+   Book your trip here 
+  </center></div>    
+
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Enter your source address</span>
+                    <input type="text" placeholder="Enter your source address" ng-model="bookData.source">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Enter your destination address</span>
+                    <input type="text" placeholder="Enter your destination address" ng-model="bookData.destination">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Starting Date</span>
+                    <input type="date" placeholder="Starting Date" ng-model="bookData.startdate">
+                </label>   
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Ending Date</span>
+                    <input type="date" placeholder="Ending Date" ng-model="bookData.enddate">
+                </label>                               
+                <br />
+
+                
+                    <div class="item item-divider"><center>
+    Budgut <br> <font color="grey">You can select any one option</font>
+  </center></div>          
+  <label class="item item-radio">   
+                    <input type="radio" name="group" ng-model="bookData.select">
+                    <div class="item-content">
+                        High
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <label class="item item-radio">
+                    <input type="radio" name="group" ng-model="bookData.select">
+                    <div class="item-content">
+                        Medium 
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                <label class="item item-radio">
+                    <input type="radio" name="group" ng-model="bookData.select">
+                    <div class="item-content">
+                        Low/Make It Cheap
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+                
+<center>
+                <a class="button button-small button-assertive ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="doBooking()">
+                    OK
+                </a>
+                <button class="button button-small button-assertive ink" data-ink-color="#9DEAFF" data-ink-opacity="1">
+                    Cancel
+                </button></center>
+            </div>       
+            </ion-content>
+</ion-view>
